@@ -13,7 +13,7 @@ namespace CondoLounge.Data.Repositories
         public CondoLoungeGenericGenericRepository(ApplicationDbContext db, ILogger<CondoLoungeGenericGenericRepository<T>> logger) 
         {
             _logger = logger;
-            _context = db;
+            _context = db;  
             _dbSet = _context.Set<T>();
         }
         public void Add(T entity)

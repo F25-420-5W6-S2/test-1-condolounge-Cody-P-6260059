@@ -11,15 +11,18 @@ namespace CondoLounge.Data
             : base(options)
         {
         }
-        
+
+        public DbSet<Condo> Condo { get; set; }
+        public DbSet<Building> Building { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Building>()
-                .HasMany(c => c.Condos)
-                .WithOne(b => b.Building)
-                .HasForeignKey(b => b.CondoNumber);
+                .HasMany(b => b.Condos)
+                .WithOne(c => c.Building)
+                .HasForeignKey(c => c.CondoNumber);
 
 
             modelBuilder.Entity<Condo>()
