@@ -38,10 +38,23 @@ namespace CondoLounge.Data
                 await _userManager.AddToRoleAsync(user, "Admin");
             }
 
-            // then seed data in
-            // check building then add
-            // check condo then add
+            // seed data
+            var building = new Building()
+            {
+                BuildingId = 1,
+                Condos = new List<Condo>(){
+                    new Condo()
+                    {
+                        CondoId = 1,
+                        location = "Top",
+                        CondoNumber = 100,
+                        CondoIdNumber = 1
+                    }
+                }
+            };
 
+            _db.Building.Add(building);
+            _db.SaveChanges();
         }
     }
 }

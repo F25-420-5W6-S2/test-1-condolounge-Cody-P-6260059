@@ -1,6 +1,7 @@
 ﻿using CondoLounge.Data.Entities;
 using CondoLounge.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.Contracts;
 
 namespace CondoLounge.Data.Repositories
 {
