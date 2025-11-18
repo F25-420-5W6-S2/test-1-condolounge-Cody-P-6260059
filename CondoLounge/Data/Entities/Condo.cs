@@ -10,9 +10,11 @@ namespace CondoLounge.Data.Entities
 
         public ICollection<ApplicationUser> Users { get; set; }
 
-        // Foreign key to building
         [Required]
         public int CondoNumber { get; set; }
+
+        // Foreign key to building
+        public int CondoIdNumber { get; set; }
         public Building Building { get; set; }
     }
 }

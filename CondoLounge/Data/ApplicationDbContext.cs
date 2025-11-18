@@ -22,7 +22,7 @@ namespace CondoLounge.Data
             modelBuilder.Entity<Building>()
                 .HasMany(b => b.Condos)
                 .WithOne(c => c.Building)
-                .HasForeignKey(c => c.CondoNumber);
+                .HasForeignKey(c => c.CondoIdNumber);
 
 
             modelBuilder.Entity<Condo>()

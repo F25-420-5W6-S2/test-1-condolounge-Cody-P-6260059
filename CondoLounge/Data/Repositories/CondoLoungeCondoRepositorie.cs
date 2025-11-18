@@ -14,7 +14,7 @@ namespace CondoLounge.Data.Repositories
             try
             {
                 var condoList = _context.Condo
-                    .Where(c => c.CondoNumber == id)
+                    .Where(c => c.CondoIdNumber == id)
                     .ToList();
 
                 return condoList;
